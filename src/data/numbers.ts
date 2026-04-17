@@ -1,0 +1,67 @@
+import type { NumberMeta } from '../types'
+
+const NUMBER_ENTRIES: Array<[value: number, word: string, synonyms: string[]]> = [
+  [1, 'uno', ['un']],
+  [2, 'dos', []],
+  [3, 'tres', []],
+  [4, 'cuatro', ['cuatros']],
+  [5, 'cinco', ['sinco']],
+  [6, 'seis', []],
+  [7, 'siete', ['ciete']],
+  [8, 'ocho', []],
+  [9, 'nueve', ['nuebe']],
+  [10, 'diez', []],
+  [11, 'once', ['onse']],
+  [12, 'doce', []],
+  [13, 'trece', []],
+  [14, 'catorce', ['catorse']],
+  [15, 'quince', ['kince']],
+  [16, 'dieciséis', ['dieciseis']],
+  [17, 'diecisiete', ['diesisiete']],
+  [18, 'dieciocho', ['diesiocho']],
+  [19, 'diecinueve', ['diesinueve']],
+  [20, 'veinte', ['biente']],
+  [21, 'veintiuno', ['veinte y uno']],
+  [22, 'veintidós', ['veintidos', 'veinte y dos']],
+  [23, 'veintitrés', ['veintitres', 'veinte y tres']],
+  [24, 'veinticuatro', ['veinte y cuatro']],
+  [25, 'veinticinco', ['veinte y cinco', 'veintisinco']],
+  [26, 'veintiséis', ['veintiseis', 'veinte y seis']],
+  [27, 'veintisiete', ['veinte y siete']],
+  [28, 'veintiocho', ['veinte y ocho']],
+  [29, 'veintinueve', ['veinte y nueve']],
+  [30, 'treinta', []],
+  [31, 'treinta y uno', ['treinta y un']],
+  [32, 'treinta y dos', []],
+  [33, 'treinta y tres', []],
+  [34, 'treinta y cuatro', []],
+  [35, 'treinta y cinco', ['treinta y sinco']],
+  [36, 'treinta y seis', []],
+  [37, 'treinta y siete', []],
+  [38, 'treinta y ocho', []],
+  [39, 'treinta y nueve', ['treinta y nuebe']],
+  [40, 'cuarenta', ['cuarentaa']],
+  [41, 'cuarenta y uno', ['cuarenta y un']],
+  [42, 'cuarenta y dos', []],
+  [43, 'cuarenta y tres', []],
+  [44, 'cuarenta y cuatro', []],
+  [45, 'cuarenta y cinco', ['cuarenta y sinco']],
+  [46, 'cuarenta y seis', []],
+  [47, 'cuarenta y siete', []],
+  [48, 'cuarenta y ocho', []],
+  [49, 'cuarenta y nueve', ['cuarenta y nuebe']],
+  [50, 'cincuenta', ['sincuenta']],
+]
+
+export const NUMBER_METADATA: NumberMeta[] = NUMBER_ENTRIES.map(([value, word, synonyms]) => ({
+  value,
+  digit: String(value),
+  word,
+  synonyms,
+}))
+
+export const NUMBER_METADATA_BY_VALUE = Object.fromEntries(
+  NUMBER_METADATA.map((numberMeta) => [numberMeta.value, numberMeta]),
+) as Record<number, NumberMeta>
+
+export const TOTAL_NUMBERS = NUMBER_METADATA.length

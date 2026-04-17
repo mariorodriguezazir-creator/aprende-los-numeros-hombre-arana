@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Azir Números PWA icon source</title>
+  <desc id="desc">Placeholder vector icon para generar assets PNG de la PWA.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101733" />
+      <stop offset="100%" stop-color="#0A0A1A" />
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF5656" />
+      <stop offset="100%" stop-color="#D91C1C" />
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="120" fill="url(#bg)" />
+  <circle cx="256" cy="256" r="196" fill="#10255F" stroke="url(#ring)" stroke-width="28" />
+
+  <g stroke="#9BC3FF" stroke-linecap="round" fill="none" opacity="0.9">
+    <path d="M256 76v360" stroke-width="16" />
+    <path d="M76 256h360" stroke-width="16" />
+    <path d="M128 128 384 384" stroke-width="14" />
+    <path d="M384 128 128 384" stroke-width="14" />
+    <path d="M146 182c60 34 160 34 220 0" stroke-width="12" />
+    <path d="M118 256c78 40 198 40 276 0" stroke-width="12" />
+    <path d="M146 330c60-34 160-34 220 0" stroke-width="12" />
+  </g>
+
+  <g fill="#D91C1C" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="256" cy="300" rx="68" ry="84" />
+    <circle cx="256" cy="194" r="40" />
+    <path d="M200 230 132 184" />
+    <path d="M190 286 102 268" />
+    <path d="M194 344 118 380" />
+    <path d="M312 230 380 184" />
+    <path d="M322 286 410 268" />
+    <path d="M318 344 394 380" />
+  </g>
+</svg>

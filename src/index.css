@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka+One&family=Nunito:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 2px #FFD700, 0 0 20px rgba(255,215,0,0.25); }
+  50% { box-shadow: 0 0 0 3px #FFD700, 0 0 35px rgba(255,215,0,0.45); }
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --color-spider-red: #d91c1c;
+    --color-spider-blue: #1a3a8f;
+    --color-spider-white: #ffffff;
+    --color-spider-dark: #0a0a1a;
+    --color-spider-surface: #0f2060;
+    --color-success: #22c55e;
+    --color-error: #ff6b6b;
+
+    --font-display: 'Bangers', cursive;
+    --font-body: 'Nunito', sans-serif;
+    --font-trace: 'Fredoka One', sans-serif;
+
+    --text-hero: clamp(4rem, 10vw, 6rem);
+    --text-display: clamp(2.75rem, 8vw, 4rem);
+    --text-heading: clamp(2rem, 5vw, 2.5rem);
+    --text-body: clamp(1rem, 2.8vw, 1.25rem);
+    --text-label: 1rem;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-spider-dark font-nunito text-spider-white;
+    background-image:
+      radial-gradient(circle at top, rgba(217, 28, 28, 0.22), transparent 30%),
+      linear-gradient(180deg, rgba(26, 58, 143, 0.24), rgba(10, 10, 26, 1) 60%);
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    @apply min-h-12 min-w-12;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  .font-bangers {
+    font-family: var(--font-display);
+  }
+
+  .font-nunito {
+    font-family: var(--font-body);
+  }
+
+  .font-fredoka {
+    font-family: var(--font-trace);
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(10, 10, 26, 0.92);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 2px solid rgba(10, 10, 26, 0.92);
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(217, 28, 28, 0.88), rgba(26, 58, 143, 0.9));
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(255, 64, 64, 0.95), rgba(54, 101, 215, 0.95));
+  }
+
+  * {
+    scrollbar-color: rgba(217, 28, 28, 0.88) rgba(10, 10, 26, 0.92);
+    scrollbar-width: thin;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-[28px] border border-spider-blue/45 bg-spider-surface/90 shadow-spider backdrop-blur-sm;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full border border-spider-red/30 bg-spider-red/10 px-3 py-1 text-sm font-bold uppercase tracking-[0.24em] text-spider-white/80;
+  }
+}
