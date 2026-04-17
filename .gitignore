@@ -33,8 +33,8 @@ dist-ssr
 Thumbs.db
 ehthumbs.db
 
-# Audio (proporcionar manualmente — ver README)
-public/audio/
+# Audio — libre de derechos (Free Music Archive / Creative Commons)
+# public/audio/  ← incluido en el repo
 
 # Herramientas internas de testing/AI
 .playwright-mcp/
