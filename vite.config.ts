@@ -13,7 +13,7 @@ export default defineConfig({
         short_name: 'Azir',
         description: 'PWA educativa para aprender números del 1 al 50 con temática Spider-Man.',
         display: 'standalone',
-        orientation: 'portrait',
+        orientation: 'any',
         theme_color: '#0A0A1A',
         background_color: '#0A0A1A',
         start_url: '/',
